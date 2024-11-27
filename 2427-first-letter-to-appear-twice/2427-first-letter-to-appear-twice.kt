@@ -15,15 +15,15 @@ return the character that appears twice
   */
 
 
-/* but we can make this more efficient by using hashmaps */
+/* but we can make this more efficient by using sets */
 class Solution {
     fun repeatedCharacter(s: String): Char {
-        val seenChar = mutableMapOf<Int, Char>()
-        for((index, char) in s.withIndex()){
-            if (seenChar.containsValue(char)){
+        val seenChar = mutableSetOf<Char>()
+        for( char in s){
+            if (char in seenChar){
                 return char
             }
-            seenChar[index] = char
+            seenChar.add(char)
         }
         return ' '
     }
