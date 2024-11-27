@@ -1,42 +1,41 @@
-class Solution {
+
+/*
+1. What are our inputs:
+- nums, array if integers IntArray nums
+- target, an integer
+
+2. What do we need to do to the inputs:
+- go through nums and find two numbers that add up to the target
+
+
+3. what do we return:
+- return the indices of the two numbers 
+
+ */
+
+ /*
+ straight forward approach would be to go through the entire list and find the numbers that add up to the target. teach number in the list would be the first number in the array. this means we might need nested loops the first loop will go throuh the first number and the inner loop would go through the rest of the list to find the target. this would be an O(n) * O(n) operation which is O(n^2) time complexity and an O(n) space complexity because the size of the space needed grows linearly as the size of the input increases 
+ */
+
+ /*
+ instead we can use hashmap for a more efficient approach. Instead of re-checking previously seen elements, we can store their indices in a hash map and find the missing number instantly. Any operation on a hashmap is O(1) and going through the list would be O(n) so we would have a time and space complexity of O(n)
+ */
+ 
+ class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
-        // Step 1: Create a hash map to store numbers and their indices
-    val numToIndex = mutableMapOf<Int, Int>()
+        val seenNums = mutableMapOf<Int, Int>()
 
-    // Step 2: Loop through each number in the array
-    for ((index, num) in nums.withIndex()) {
-        // Step 3: Calculate the complement
-        val complement = target - num
+        for((index, num) in nums.withIndex()){
+            val missingNum = target - num
+            if(seenNums.containsKey(missingNum)){
+                return intArrayOf(seenNums.getValue(missingNum), index)
+            }
 
-        // Step 4: Check if the complement exists in the hash map
-        if (numToIndex.containsKey(complement)) {
-            // If it exists, return the indices of the current number and the complement
-            return intArrayOf(numToIndex[complement]!!, index)
+            seenNums[num] = index
         }
 
-        // Step 5: Otherwise, add the current number and its index to the hash map
-        numToIndex[num] = index
-    }
-
-    // Step 6: Return an empty array if no solution is found (not required as per the problem)
-    return intArrayOf()
+        return intArrayOf()
+        
         
     }
 }
-
-/*
-Simplifying the Problem:
-1. What are my inputs?
- - An array of integers called nums (e.g., [2, 7, 11, 15]).
- - A single integer target (e.g., 9).
-
-2. What do I need to do with the input?
-- Find two numbers in the nums array that add up to the target.
-- Return the indices of those two numbers.
-
-3. What is the expected output?
-- The indices of the two numbers as a pair (e.g., [0, 1] if nums[0] + nums[1] == target).
-
-To put it simply: 
-We are given a list of numbers and a target sum. Our task is to figure out which two numbers in the list add up to the target and return their positions in the list.
- */
