@@ -18,11 +18,9 @@ return the character that appears twice
 /* but we can make this more efficient by using sets */
 class Solution {
     fun repeatedCharacter(s: String): Char {
-        val seenChar = mutableSetOf<Char>()
+        val seenChar = hashSetOf<Char>()
         for( char in s){
-            if (char in seenChar){
-                return char
-            }
+            if (char in seenChar) return char
             seenChar.add(char)
         }
         return ' '
