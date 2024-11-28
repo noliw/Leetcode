@@ -7,10 +7,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/noliw/Leetcode/tree/master/0001-two-sum) |
+| [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 ## Hash Table
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/noliw/Leetcode/tree/master/0001-two-sum) |
+| [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## String
 |  |
@@ -19,9 +21,22 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## Counting
 |  |
 | ------- |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
+## Math
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
+## Binary Search
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
+## Sorting
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 <!---LeetCode Topics End-->
