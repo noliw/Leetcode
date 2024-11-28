@@ -1,23 +1,15 @@
-/*
-1. inputs: 
-- we have an array of integers n with distinct numbers 
-- the range in between [0, n]
-
-2. find the missing number in that range
-3. return that number 
-*/
 class Solution {
     fun missingNumber(nums: IntArray): Int {
-       // Step 1: Calculate the size of the array
-    val n = nums.size
+      // Step 1: Create a set with all numbers from 0 to n
+        val n = nums.size
+        val numberSet = (0..n).toMutableSet()
 
-    // Step 2: Calculate the expected sum of numbers from 0 to n
-    val expectedSum = (0..n).sum()
+        // Step 2: Remove each number in nums from the set
+        for (num in nums) {
+            numberSet.remove(num)
+        }
 
-    // Step 3: Calculate the actual sum of elements in the nums array
-    val actualSum = nums.sum()
-
-    // Step 4: Find the missing number by subtracting the actual sum from the expected sum
-    return expectedSum - actualSum
+        // Step 3: The remaining number in the set is the missing number
+        return numberSet.first()
     }
 }
