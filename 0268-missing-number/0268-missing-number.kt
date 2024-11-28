@@ -8,6 +8,16 @@
 */
 class Solution {
     fun missingNumber(nums: IntArray): Int {
-        return (0..nums.size).sum() - nums.sum()
+       // Step 1: Calculate the size of the array
+    val n = nums.size
+
+    // Step 2: Calculate the expected sum of numbers from 0 to n
+    val expectedSum = n * (n + 1) / 2
+
+    // Step 3: Calculate the actual sum of elements in the nums array
+    val actualSum = nums.sum()
+
+    // Step 4: Find the missing number by subtracting the actual sum from the expected sum
+    return expectedSum - actualSum
     }
 }
