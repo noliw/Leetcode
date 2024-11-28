@@ -12,7 +12,7 @@ class Solution {
     val n = nums.size
 
     // Step 2: Calculate the expected sum of numbers from 0 to n
-    val expectedSum = n * (n + 1) / 2
+    val expectedSum = (0..n).sum()
 
     // Step 3: Calculate the actual sum of elements in the nums array
     val actualSum = nums.sum()
