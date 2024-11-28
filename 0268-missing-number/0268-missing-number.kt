@@ -8,9 +8,6 @@
 */
 class Solution {
     fun missingNumber(nums: IntArray): Int {
-        var n = nums.size
-        var expectedSum = (0..n).sum()
-        var actualSum = nums.sum()
-        return expectedSum - actualSum
+        return (0..nums.size).sum() - nums.sum()
     }
 }
