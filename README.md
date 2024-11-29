@@ -8,11 +8,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/noliw/Leetcode/tree/master/0001-two-sum) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
+| [1391-counting-elements](https://github.com/noliw/Leetcode/tree/master/1391-counting-elements) |
 ## Hash Table
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/noliw/Leetcode/tree/master/0001-two-sum) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
+| [1391-counting-elements](https://github.com/noliw/Leetcode/tree/master/1391-counting-elements) |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## String
 |  |
