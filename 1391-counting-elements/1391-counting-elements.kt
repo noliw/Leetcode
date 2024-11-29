@@ -8,9 +8,12 @@
 class Solution {
     fun countElements(arr: IntArray): Int {
         var count = 0
-        var hash = arr.toHashSet()
+        val set = HashSet<Int>()
+        for(num in arr) {
+            set.add(num)
+        }
         for (x in arr){
-            if (hash.contains(x+1)) count++
+            if (set.contains(x+1)) count++
         }
         return count
     }
