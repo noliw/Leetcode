@@ -17,8 +17,11 @@
 
 class Solution {
     fun checkIfPangram(sentence: String): Boolean {
-       val alphabetSet = ('a'..'z').toSet()
-       val sentenceSet = sentence.toSet()
-    return sentenceSet.containsAll(alphabetSet)
+       val alphabets = ('a'..'z').toHashSet()
+       val sentenceLetters = hashSetOf<Char>()
+       for (letter in sentence){
+        sentenceLetters.add(letter)
+       }
+       return sentenceLetters.containsAll(alphabets)
     }
 }
