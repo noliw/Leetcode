@@ -1,12 +1,14 @@
 /*
 1. what is the input:
-a string with lowercase letters
+- a string s that has lowercase letters
 
 2. what do we need to do to the input:
-go through the string and find the first letter to appear twice
+- find the letter that appears twice first
+
 
 3. what do we need to return:
-return the character that appears twice
+- return that letter
+
 
  */
 
@@ -18,11 +20,11 @@ return the character that appears twice
 /* but we can make this more efficient by using sets */
 class Solution {
     fun repeatedCharacter(s: String): Char {
-        val seenChar = hashSetOf<Char>()
-        for( char in s){
-            if (char in seenChar) return char
-            seenChar.add(char)
-        }
-        return ' '
+       val seenChar = hashSetOf<Char>()
+       for(char in s) {
+        if(seenChar.contains(char)) return char
+        seenChar.add(char)
+       }
+       return ' '
     }
 }
