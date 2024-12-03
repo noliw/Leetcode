@@ -22,6 +22,6 @@ class Solution {
        for (letter in sentence){
         sentenceLetters.add(letter)
        }
-       return sentenceLetters.containsAll(alphabets)
+       return sentenceLetters == alphabets
     }
 }
