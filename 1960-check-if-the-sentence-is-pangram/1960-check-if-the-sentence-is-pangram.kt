@@ -17,10 +17,6 @@
 
 class Solution {
     fun checkIfPangram(sentence: String): Boolean {
-       val sentenceLetters = hashSetOf<Char>()
-       for (letter in sentence){
-        sentenceLetters.add(letter)
-       }
-       return sentenceLetters.size == 26
+       return sentence.toHashSet().size == 26
     }
 }
