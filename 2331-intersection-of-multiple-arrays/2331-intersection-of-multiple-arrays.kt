@@ -18,7 +18,7 @@ class Solution {
        var ans = mutableListOf<Int>()
        for (subArrayIdx in nums){
             for (numIdx in subArrayIdx) { 
-                numCount[numIdx] = numCount.getValue(numIdx) + 1
+                numCount.put(numIdx, numCount.getValue(numIdx) + 1)
             }
        } 
        for ((key, value) in numCount) {
