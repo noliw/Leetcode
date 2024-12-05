@@ -14,19 +14,20 @@
 
 class Solution {
     fun intersection(nums: Array<IntArray>): List<Int> {
-       var numCount = mutableMapOf<Int, Int>().withDefault{ 0 }
-       var ans = mutableListOf<Int>()
-       for (subArrayIdx in nums){
-            for (numIdx in subArrayIdx) { 
-                numCount.put(numIdx, numCount.getOrDefault(numIdx, 0) + 1)
+       var count = HashMap<Int, Int>()
+        var answer = ArrayList<Int>()
+        for(array in nums){
+            for(x in array){
+                count.put(x, count.getOrDefault(x, 0) + 1)
             }
-       } 
-       for ((key, value) in numCount) {
-       if(value == nums.size){
-            ans.add(key)
-       }
-       }
-       ans.sort()
-       return ans
+        }
+        for((key,value) in count){
+            if(value==nums.size){
+                answer.add(key)
+            }
+        }
+
+        answer.sort()
+        return answer;
     }
 }
