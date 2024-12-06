@@ -15,7 +15,7 @@
 class Solution {
     fun intersection(nums: Array<IntArray>): List<Int> {
        var count = HashMap<Int, Int>()
-        var answer = ArrayList<Int>()
+        var answer = mutableListOf<Int>()
         for(array in nums){
             for(x in array){
                 count.put(x, count.getOrDefault(x, 0) + 1)
