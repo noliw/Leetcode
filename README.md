@@ -17,12 +17,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 | [1391-counting-elements](https://github.com/noliw/Leetcode/tree/master/1391-counting-elements) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/noliw/Leetcode/tree/master/1960-check-if-the-sentence-is-pangram) |
+| [2053-check-if-all-characters-have-equal-number-of-occurrences](https://github.com/noliw/Leetcode/tree/master/2053-check-if-all-characters-have-equal-number-of-occurrences) |
 | [2331-intersection-of-multiple-arrays](https://github.com/noliw/Leetcode/tree/master/2331-intersection-of-multiple-arrays) |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## String
 |  |
 | ------- |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/noliw/Leetcode/tree/master/1960-check-if-the-sentence-is-pangram) |
+| [2053-check-if-all-characters-have-equal-number-of-occurrences](https://github.com/noliw/Leetcode/tree/master/2053-check-if-all-characters-have-equal-number-of-occurrences) |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## Bit Manipulation
 |  |
@@ -32,6 +34,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [2053-check-if-all-characters-have-equal-number-of-occurrences](https://github.com/noliw/Leetcode/tree/master/2053-check-if-all-characters-have-equal-number-of-occurrences) |
 | [2331-intersection-of-multiple-arrays](https://github.com/noliw/Leetcode/tree/master/2331-intersection-of-multiple-arrays) |
 | [2427-first-letter-to-appear-twice](https://github.com/noliw/Leetcode/tree/master/2427-first-letter-to-appear-twice) |
 ## Math
