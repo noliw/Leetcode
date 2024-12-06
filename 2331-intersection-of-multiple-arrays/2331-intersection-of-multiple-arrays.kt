@@ -14,20 +14,36 @@
 
 class Solution {
     fun intersection(nums: Array<IntArray>): List<Int> {
-       var count = HashMap<Int, Int>()
-        var answer = ArrayList<Int>()
-        for(array in nums){
-            for(x in array){
-                count.put(x, count.getOrDefault(x, 0) + 1)
+       // Step 1: Create a hash map to count occurrences of each number.
+    val countMap = mutableMapOf<Int, Int>()
+    
+    // Step 2: Initialize the hash map with the first subarray.
+    for (num in nums[0]) {
+        countMap[num] = 1 // Mark each number from the first subarray.
+    }
+    
+    // Step 3: Iterate through the rest of the subarrays.
+    for (i in 1 until nums.size) {
+        // Create a set of the current subarray for efficient lookups.
+        val currentSet = nums[i].toSet()
+        
+        // Step 4: Update countMap by incrementing counts for numbers present in the current subarray.
+        for ((key, value) in countMap.entries) {
+            if (key in currentSet) {
+                countMap[key] = value + 1
             }
         }
-        for((key,value) in count){
-            if(value==nums.size){
-                answer.add(key)
-            }
+    }
+    
+    // Step 5: Collect numbers that appear in all subarrays (count == nums.size).
+    val result = mutableListOf<Int>()
+    for ((key, value) in countMap) {
+        if (value == nums.size) {
+            result.add(key)
         }
-
-        answer.sort()
-        return answer;
+    }
+    
+    // Step 6: Sort the result.
+    return result.sorted()
     }
 }
