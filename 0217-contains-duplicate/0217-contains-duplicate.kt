@@ -29,14 +29,13 @@ instead we can use a hash map to keep track of each occurance of a number and re
   */
 class Solution {
     fun containsDuplicate(nums: IntArray): Boolean {
-        val seenNums = HashMap<Int, Int>()
-
-        for (num in nums){
-            if (seenNums.contains(num)) return true
-
-            seenNums[num] = seenNums.getOrDefault(num, 0) + 1
+         val seen = HashSet<Int>()
+        for (num in nums) {
+            if (num in seen) {
+                return true
+            }
+            seen.add(num)
         }
-
         return false
     }
 }
