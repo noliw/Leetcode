@@ -1,17 +1,19 @@
 class Solution {
     fun isAnagram(s: String, t: String): Boolean {
-        val sSeen = HashMap<Char, Int>()
-val tSeen = HashMap<Char, Int>()
+        // val sSeen = HashMap<Char, Int>()
+        // val tSeen = HashMap<Char, Int>()
 
-for (char in s) {
-    sSeen[char] = sSeen.getOrDefault(char, 0) + 1
-}
+        // for (char in s) {
+        //     sSeen[char] = sSeen.getOrDefault(char, 0) + 1
+        // }
 
-for (char in t) {
-    tSeen[char] = tSeen.getOrDefault(char, 0) + 1
-}
+        // for (char in t) {
+        //     tSeen[char] = tSeen.getOrDefault(char, 0) + 1
+        // }
 
-return sSeen == tSeen
-        
+        // return sSeen == tSeen
+        return s.toCharArray().sorted() == t.toCharArray().sorted()
     }
 }
+
+// we can also use sorting return s.sorted() == t.sorted()
