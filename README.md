@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/noliw/Leetcode/tree/master/0001-two-sum) |
+| [0049-group-anagrams](https://github.com/noliw/Leetcode/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/noliw/Leetcode/tree/master/0217-contains-duplicate) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 | [1391-counting-elements](https://github.com/noliw/Leetcode/tree/master/1391-counting-elements) |
@@ -15,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/noliw/Leetcode/tree/master/0001-two-sum) |
+| [0049-group-anagrams](https://github.com/noliw/Leetcode/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/noliw/Leetcode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/noliw/Leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
@@ -26,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0049-group-anagrams](https://github.com/noliw/Leetcode/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/noliw/Leetcode/tree/master/0242-valid-anagram) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/noliw/Leetcode/tree/master/1960-check-if-the-sentence-is-pangram) |
 | [2053-check-if-all-characters-have-equal-number-of-occurrences](https://github.com/noliw/Leetcode/tree/master/2053-check-if-all-characters-have-equal-number-of-occurrences) |
@@ -52,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0049-group-anagrams](https://github.com/noliw/Leetcode/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/noliw/Leetcode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/noliw/Leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
