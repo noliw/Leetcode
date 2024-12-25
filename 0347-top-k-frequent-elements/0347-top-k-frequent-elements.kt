@@ -8,33 +8,29 @@
 
 class Solution {
     fun topKFrequent(nums: IntArray, k: Int): IntArray {
-        // Step 1: Create a frequency map to count occurrences of each number.
-    val frequencyMap = mutableMapOf<Int, Int>() // Map to store number and its frequency.
+       // Step 1: Create a frequency map to count occurrences of each number.
+    val frequencyMap = HashMap<Int, Int>()
     for (num in nums) {
-        frequencyMap[num] = frequencyMap.getOrDefault(num, 0) + 1 // Increment frequency.
+        frequencyMap[num] = frequencyMap.getOrDefault(num, 0) + 1
     }
 
-    // Step 2: Create a bucket list where the index represents the frequency.
-    // The size of the buckets array is nums.size + 1 since the maximum frequency
+    // Step 2: Create a list of buckets where the index represents frequency.
+    // The size of the bucket array is nums.size + 1 because the maximum frequency
     // an element can have is nums.size (if all elements are the same).
-    val buckets = List(nums.size + 1) { mutableListOf<Int>() } // Initialize empty buckets.
+    val buckets = List(nums.size + 1) { mutableListOf<Int>() }
     for ((num, freq) in frequencyMap) {
         buckets[freq].add(num) // Add the number to the bucket corresponding to its frequency.
     }
 
     // Step 3: Gather the top k frequent elements from the buckets.
-    val result = mutableListOf<Int>() // List to store the result.
-    for (i in buckets.size - 1 downTo 1) { // Start from the highest frequency bucket.
-        for (num in buckets[i]) {
+    val result = mutableListOf<Int>()
+    for (bucket in buckets.size - 1 downTo 0) { // Start from the highest frequency bucket.
+        for (num in buckets[bucket]) {
             result.add(num) // Add the number to the result list.
-            if (result.size == k) { // Stop once we have k elements.
-                return result.toIntArray() // Convert the result list to an array and return.
-            }
+            if (result.size == k) return result.toIntArray() // Stop once we have k elements.
         }
     }
 
-    // If we exhaust all elements, return the result as an array (unlikely edge case).
-    return result.toIntArray()
-        
+    return result.toIntArray() // Return the final list of k most frequent elements.
     }
 }
