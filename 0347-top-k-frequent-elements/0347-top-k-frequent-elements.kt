@@ -8,26 +8,30 @@
 
 class Solution {
     fun topKFrequent(nums: IntArray, k: Int): IntArray {
-        val count = HashMap<Int, Int>()
-        val freq = List(nums.size + 1) { mutableListOf<Int>() }
+        // Step 1: Create a frequency map to count occurrences of each number.
+    val frequencyMap = mutableMapOf<Int, Int>()
+    for (num in nums) {
+        frequencyMap[num] = frequencyMap.getOrDefault(num, 0) + 1
+    }
 
-        for (num in nums) {
-            count[num] = count.getOrDefault(num, 0) + 1
-        }
-        for ((num, cnt) in count) {
-            freq[cnt].add(num)
-        }
+    // Step 2: Create a list of buckets where the index represents frequency.
+    // The size of the bucket array is nums.size + 1 because the maximum frequency
+    // an element can have is nums.size (if all elements are the same).
+    val buckets = Array<MutableList<Int>>(nums.size + 1) { mutableListOf() }
+    for ((num, freq) in frequencyMap) {
+        buckets[freq].add(num) // Add the number to the bucket corresponding to its frequency.
+    }
 
-        val res = mutableListOf<Int>()
-        for (i in freq.size - 1 downTo 1) {
-            for (num in freq[i]) {
-                res.add(num)
-                if (res.size == k) {
-                    return res.toIntArray()
-                }
-            }
+    // Step 3: Gather the top k frequent elements from the buckets.
+    val result = mutableListOf<Int>()
+    for (i in buckets.size - 1 downTo 0) { // Start from the highest frequency bucket.
+        for (num in buckets[i]) {
+            result.add(num) // Add the number to the result list.
+            if (result.size == k) return result.toIntArray() // Stop once we have k elements.
         }
-        return res.toIntArray()
+    }
+
+    return result.toIntArray() // Return the final list of k most frequent elements.
         
     }
 }
