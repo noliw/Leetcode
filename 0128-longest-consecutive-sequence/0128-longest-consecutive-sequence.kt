@@ -10,29 +10,19 @@
 
 
 class Solution {
-    fun longestConsecutive(numbers: IntArray): Int {
-    val uniqueNumbers = numbers.toSet() // Store unique elements for quick lookup
-    var longestStreak = 0 // Track the longest sequence length
+    fun longestConsecutive(nums: IntArray): Int {
+        val numSet = nums.toSet()
+        var longest = 0
 
-    for (num in uniqueNumbers) {
-        // Only start counting if it's the start of a sequence
-        if ((num - 1) !in uniqueNumbers) {
-            var currentNum = num
-            var currentStreak = 1
-
-            // Count all consecutive numbers
-            while ((currentNum + 1) in uniqueNumbers) {
-                currentNum++
-                currentStreak++
+        for (num in numSet) {
+            if ((num - 1) !in numSet) {
+                var length = 1
+                while ((num + length) in numSet) {
+                    length++
+                }
+                longest = maxOf(longest, length)
             }
-
-            // Update the longest sequence length
-            longestStreak = maxOf(longestStreak, currentStreak)
         }
+        return longest
     }
-
-    return longestStreak
-}
-
-
 }
