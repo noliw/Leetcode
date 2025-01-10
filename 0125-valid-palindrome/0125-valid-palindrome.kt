@@ -9,14 +9,22 @@
 
 class Solution {
     fun isPalindrome(s: String): Boolean {
-        var cleanedString = s.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")
-    var start = 0
-    var end = cleanedString.length - 1
-    while (start < end){
-        if(cleanedString[start] != cleanedString[end]) return false
-        start++
-        end--
-    }
-    return true
+        var l = 0
+        var r = s.length - 1
+
+        while (l < r) {
+            while (l < r && !s[l].isLetterOrDigit()) {
+                l++
+            }
+            while (r > l && !s[r].isLetterOrDigit()) {
+                r--
+            }
+            if (s[l].lowercase() != s[r].lowercase()) {
+                return false
+            }
+            l++
+            r--
+        }
+        return true
     }
 }
