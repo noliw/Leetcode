@@ -13,12 +13,8 @@ class Solution {
         var r = s.length - 1
 
         while (l < r) {
-            while (l < r && !s[l].isLetterOrDigit()) {
-                l++
-            }
-            while (r > l && !s[r].isLetterOrDigit()) {
-                r--
-            }
+            while (l < r && !s[l].isLetterOrDigit())  l++
+            while (r > l && !s[r].isLetterOrDigit()) r--
             if (s[l].lowercase() != s[r].lowercase()) {
                 return false
             }
