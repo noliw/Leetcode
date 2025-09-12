@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0238-product-of-array-except-self](https://github.com/noliw/Leetcode/tree/master/0238-product-of-array-except-self) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 | [0347-top-k-frequent-elements](https://github.com/noliw/Leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0485-max-consecutive-ones](https://github.com/noliw/Leetcode/tree/master/0485-max-consecutive-ones) |
 | [1391-counting-elements](https://github.com/noliw/Leetcode/tree/master/1391-counting-elements) |
 | [2331-intersection-of-multiple-arrays](https://github.com/noliw/Leetcode/tree/master/2331-intersection-of-multiple-arrays) |
 ## Hash Table
