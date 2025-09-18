@@ -1,0 +1,20 @@
+class Solution {
+    fun minSubArrayLen(target: Int, nums: IntArray): Int {
+        if (target <= 1) return 0
+
+    var minLength = Int.MAX_VALUE
+    var sum = 0
+    var left = 0
+
+    for (right in nums.indices){
+        sum += nums[right]
+        while (sum >= target){
+            minLength = minOf(minLength, right - left + 1)
+            sum -= nums[left] 
+            left++
+        }
+        
+    }
+        return if (minLength == Int.MAX_VALUE) 0 else minLength
+    }
+}
