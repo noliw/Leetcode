@@ -1,26 +1,17 @@
-/*
-1. Given a string
-2. what do we need to do?
-    - convert all uppercase letters to lower case
-    - remove all non-alphanumeric characters
-    - check if its a palindrom:  reads the same forward and backwards
-3. return true if its a palindrom and false otherwise
-*/
-
 class Solution {
     fun isPalindrome(s: String): Boolean {
-        var l = 0
-        var r = s.length - 1
+        val formatted = s.lowercase().filter { it.isLetterOrDigit() }
+        var right = formatted.length - 1
+        var left = 0
+        
 
-        while (l < r) {
-            while (l < r && !s[l].isLetterOrDigit())  l++
-            while (r > l && !s[r].isLetterOrDigit()) r--
-            if (s[l].lowercase() != s[r].lowercase()) {
-                return false
-            }
-            l++
-            r--
+        while (left < right){
+            if (formatted[left] != formatted[right]) return false
+                left++
+                right--
+            
         }
         return true
+        
     }
 }
