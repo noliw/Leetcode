@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0485-max-consecutive-ones](https://github.com/noliw/Leetcode/tree/master/0485-max-consecutive-ones) |
 | [0643-maximum-average-subarray-i](https://github.com/noliw/Leetcode/tree/master/0643-maximum-average-subarray-i) |
 | [0713-subarray-product-less-than-k](https://github.com/noliw/Leetcode/tree/master/0713-subarray-product-less-than-k) |
+| [1019-squares-of-a-sorted-array](https://github.com/noliw/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1046-max-consecutive-ones-iii](https://github.com/noliw/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
 | [1391-counting-elements](https://github.com/noliw/Leetcode/tree/master/1391-counting-elements) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/noliw/Leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
@@ -85,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0242-valid-anagram](https://github.com/noliw/Leetcode/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/noliw/Leetcode/tree/master/0268-missing-number) |
 | [0347-top-k-frequent-elements](https://github.com/noliw/Leetcode/tree/master/0347-top-k-frequent-elements) |
+| [1019-squares-of-a-sorted-array](https://github.com/noliw/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [2331-intersection-of-multiple-arrays](https://github.com/noliw/Leetcode/tree/master/2331-intersection-of-multiple-arrays) |
 ## Divide and Conquer
 |  |
@@ -122,6 +124,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/noliw/Leetcode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0344-reverse-string](https://github.com/noliw/Leetcode/tree/master/0344-reverse-string) |
 | [0392-is-subsequence](https://github.com/noliw/Leetcode/tree/master/0392-is-subsequence) |
+| [1019-squares-of-a-sorted-array](https://github.com/noliw/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 ## Sliding Window
 |  |
 | ------- |
