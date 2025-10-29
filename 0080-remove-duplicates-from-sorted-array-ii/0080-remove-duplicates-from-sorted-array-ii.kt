@@ -1,23 +1,12 @@
 class Solution {
     fun removeDuplicates(nums: IntArray): Int {
-        var left = 1
-    var right = 1
-    var count = 1
-    
-
-    for (right in 1 until nums.size) {
-        if (nums[right] == nums[right - 1]) {
-            count += 1
-        } else {
-            count = 1
+        var left = 2
+        for (right in 2 until nums.size){
+            if(nums[right] != nums[left - 2]){
+                nums[left] = nums[right]
+                left++
+            }
         }
-
-        if (count <= 2) {
-            nums[left] = nums[right]
-            left += 1
-        }
-    }
-
-    return left
+        return left
     }
 }
