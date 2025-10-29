@@ -1,24 +1,27 @@
 class Solution {
-     fun sortedSquares(nums: IntArray): IntArray {
+    fun sortedSquares(nums: IntArray): IntArray {
+        if(nums.isEmpty()) return intArrayOf()
+
         var left = 0
         var right = nums.size - 1
-        val result = IntArray(nums.size)
-        var pos = nums.size - 1   // fill result from the end
+        var result = mutableListOf<Int>()
 
-        while (left <= right) {
-            val leftSquare = nums[left] * nums[left]
-            val rightSquare = nums[right] * nums[right]
-
-            if (leftSquare > rightSquare) {
-                result[pos] = leftSquare
-                left++
-            } else {
-                result[pos] = rightSquare
-                right--
-            }
-            pos--
+        while (left <= right){
+            var leftSqr = nums[left] * nums[left]
+            var rightSqr = nums[right] * nums[right]
+            when{
+                 leftSqr < rightSqr -> {
+                    result.add(0, rightSqr)
+                    right--
+                }
+                else -> {
+                     result.add(0, leftSqr)
+                    left++
+                }
+            } 
         }
-        return result
+
+        return result.toIntArray()
+        
     }
-    
 }
