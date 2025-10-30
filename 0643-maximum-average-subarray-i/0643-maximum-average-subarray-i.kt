@@ -10,8 +10,7 @@ class Solution {
         var maxSum = sum
 
         for (right in k until nums.size){
-            sum += nums[right]
-            sum -= nums[right - k]
+            sum += nums[right] -  nums[right - k]
             maxSum = maxOf(maxSum, sum)
         }
         return maxSum / k
