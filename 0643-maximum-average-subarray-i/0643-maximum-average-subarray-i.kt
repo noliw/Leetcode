@@ -1,19 +1,19 @@
 class Solution {
     fun findMaxAverage(nums: IntArray, k: Int): Double {
-        // Build the first window [0..k-1]
-        var windowSum = 0.0
-        for (i in 0 until k) windowSum += nums[i]
-
-        var bestSum = windowSum
-
-        // Slide the window across the array
-        for (right in k until nums.size) {
-            val left = right - k                      // index that leaves the window
-            windowSum += nums[right]                  // add the new element entering
-            windowSum -= nums[left]                   // remove the element leaving
-            if (windowSum > bestSum) bestSum = windowSum
+       
+        var sum = 0.0
+        
+        for (right in 0 until k){
+            sum += nums[right]
         }
 
-        return bestSum / k
+        var maxSum = sum
+
+        for (right in k until nums.size){
+            sum += nums[right]
+            sum -= nums[right - k]
+            maxSum = maxOf(maxSum, sum)
+        }
+        return maxSum / k
     }
 }
