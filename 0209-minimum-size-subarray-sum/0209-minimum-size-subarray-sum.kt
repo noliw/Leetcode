@@ -1,19 +1,23 @@
 class Solution {
     fun minSubArrayLen(target: Int, nums: IntArray): Int {
-    
-    var minLength = Int.MAX_VALUE
-    var sum = 0
-    var left = 0
 
-    for (right in nums.indices){
-        sum += nums[right]
-        while (sum >= target){
-            minLength = minOf(minLength, right - left + 1)
-            sum -= nums[left] 
-            left++
-        }
+         if (nums.isEmpty() || target < 0) return 0
         
-    }
-        return if (minLength == Int.MAX_VALUE) 0 else minLength
+        var left = 0
+        var minLen = Int.MAX_VALUE
+        var sum = 0
+
+        for(right in nums.indices){
+            sum += nums[right]
+
+            while(sum >= target){
+                minLen = minOf(minLen, right - left + 1)
+                sum -= nums[left]
+                left++
+            }
+        }
+
+        return if(minLen == Int.MAX_VALUE) 0 else minLen
+
     }
 }
