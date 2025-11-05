@@ -7,7 +7,7 @@ class Solution {
 
         while (left < right){
             val width = right - left
-            val length = if (height[left] < height[right]) height[left] else height[right]
+            val length = minOf(height[left], height[right])
             var currArea = width * length
             maxArea = maxOf(maxArea, currArea)
 
